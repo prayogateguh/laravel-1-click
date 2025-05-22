@@ -13,6 +13,18 @@ sudo chown -R larasail:www-data /var/www/laravel/storage
 cd /var/www/laravel
 composer install
 cp .env.example .env
-certbot --nginx -d jadidlabs.com -d www.jadidlabs.com
 
+sudo snap install core; sudo snap refresh core
+sudo apt remove certbot
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo nano /etc/nginx/sites-available/laravel
+sudo nginx -t
+sudo systemctl reload nginx
+sudo ufw allow 'Nginx Full'
+sudo ufw delete allow 'Nginx HTTP'
+sudo ufw status
+sudo certbot --nginx -d jadidlabs.com -d www.jadidlabs.com
+sudo systemctl status snap.certbot.renew.service
+sudo certbot renew --dry-run
 ```
