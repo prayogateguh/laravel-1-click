@@ -62,9 +62,7 @@
       "scripts": [
         "scripts/01-lemp.sh",
         "scripts/02-ufw-nginx.sh",
-        "scripts/03-force-ssh-logout.sh",
-        "scripts/90-cleanup.sh",
-        "scripts/99-img-check.sh"
+        "scripts/03-force-ssh-logout.sh"
       ]
     }
   ]
