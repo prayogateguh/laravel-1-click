@@ -1,9 +1,18 @@
 {
   "variables": {
+    "image_name": "laravel-22-04-snapshot-{{timestamp}}",
     "apt_packages": "nginx software-properties-common language-pack-en-base unzip python3 python3-venv libaugeas0 python3-pip python3-certbot-nginx",
     "application_name": "Laravel",
     "application_version": ""
   },
+  "builders": [
+    {
+      "type": "null",
+      "ssh_host": "172.235.60.182",
+      "ssh_username": "root",
+      "ssh_password": "Theguh$22$Prayoga"
+    }
+  ],
   "provisioners": [
     {
       "type": "shell",
