@@ -8,9 +8,9 @@
   "builders": [
     {
       "type": "null",
-      "ssh_host": "172.235.60.182",
-      "ssh_username": "root",
-      "ssh_password": "Theguh$22$Prayoga"
+      "ssh_host": "127.0.0.1",
+      "ssh_username": "usr",
+      "ssh_password": "pwd"
     }
   ],
   "provisioners": [
